@@ -1,53 +1,50 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package chapter6classesandobjects;
+
+import java.util.Scanner;
 
 /**
  *
  * @author Tutor
  */
-public class Rectangle {
-
-// Privates fields can be accesses from within the class
-    private double length;
-    private double width;
+public class Chapter6ClassesandObjects {
 
     /**
-     * setLength method stores a value in the length field.
-     *
-     * @param len The value to store in length
+     * @param args the command line arguments
      */
-    public void setLength(double len) {
-        length = len;
-    }
+    public static void main(String[] args) {
+        // Creates a Rectangle object and assign its
+        // address to the box variable.
+        Rectangle box = new Rectangle(15, 63);
+        Scanner input = new Scanner(System.in);
+        // Indicates what we are doing.
+        //System.out.println("Sending the value 10.0 "
+        //  + "to the setLength method");
+        // Calls the box object setLength
+        // box.setLength(10.0);
 
-    /**
-     * setwidth method stores a value in the width field.
-     *
-     * @param len The value to store in length
-     */
-    public void setWidth(double w) {
-        width = w;
-    }
+        System.out.println("What is the length of the box? ");
+        double length1 = input.nextDouble();
+        // Calls the box object setLength and set to user's input
+        box.setLength(length1);
+        // Calls the box objects setWidth to user's input and setWidth to user's input.
+        //box.setWidth(20.0);
+        System.out.println("What is the width of the box? ");
+        double width1 = input.nextDouble();
+        box.setWidth(width1);
 
-    public double getLength() {
+        // Display the object's setWidth method and setLength method
+        System.out.println(" The box's length is "
+                + box.getLength());
+        System.out.println(" The box's width is "
+                + box.getWidth());
 
-        //size=box.setLength();
-        return length;
-    }
+        System.out.println(" The box's area is "
+                + box.getArea());
 
-    public double getWidth() {
+        // Indicates what we are done
+        System.out.println("Done.");
 
-        // size=box.setWidth();
-        return width;
-    }
-
-    public double getArea() {
-
-        return length * width;
     }
 
 }
